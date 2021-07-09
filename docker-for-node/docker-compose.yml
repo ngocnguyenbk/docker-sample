@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    build: .
+    tty: true
+    container_name: docker-for-node
+    ports:
+      - "9000:3000"
+    volumes:
+      - ".:/docker-for-node"
+      - /docker-for-node/node_modules/
+volumes:
+  node_modules:
